@@ -7,6 +7,7 @@ export const globalStyles = css`
   }
   body {
     margin: 0;
+    overflow-x: hidden;
   }
   #root {
     max-width: 1280px;

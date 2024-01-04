@@ -4,7 +4,8 @@ import { NavBar } from "../styled/navStyle";
 const Nav = () => {
   return (
     <NavBar>
-      <Link to={"/horizon"}>nav</Link>
+      <Link to={"/"}>home</Link>
+      <Link to={"/horizon"}>horizon</Link>
     </NavBar>
   );
 };

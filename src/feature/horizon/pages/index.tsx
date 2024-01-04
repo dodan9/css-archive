@@ -1,8 +1,12 @@
+import { HorizonContainer, HorizonItem } from "../styles/horizonStyles";
+
 const Horizon = () => {
   return (
-    <>
-      <div>horizon</div>
-    </>
+    <HorizonContainer>
+      {Array.from({ length: 20 }, (_, index) => {
+        return <HorizonItem key={index}>horizon{index}</HorizonItem>;
+      })}
+    </HorizonContainer>
   );
 };
 
