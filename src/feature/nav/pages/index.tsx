@@ -6,6 +6,7 @@ const Nav = () => {
     <NavBar>
       <Link to={"/"}>home</Link>
       <Link to={"/horizon"}>horizon</Link>
+      <Link to={"/interact"}>interact</Link>
     </NavBar>
   );
 };
