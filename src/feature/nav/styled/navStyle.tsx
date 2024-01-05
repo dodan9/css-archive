@@ -5,4 +5,5 @@ export const NavBar = styled.div`
   display: flex;
   padding: 10px;
   justify-content: space-around;
+  z-index: 999;
 `;
