@@ -5,7 +5,7 @@ import {
   InteractLight,
 } from "../styles/interactStyles";
 
-const Card = ({ lightType }: { lightType: "circle" | "line" }) => {
+const Card = ({ lightType }: { lightType: "circle" | "line" | "glossy" }) => {
   const frameRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const lightRef = useRef<HTMLDivElement>(null);
@@ -37,12 +37,21 @@ const Card = ({ lightType }: { lightType: "circle" | "line" }) => {
         circle at ${left}px ${top}px, #ffffff8e, #ffffff00, #00000040
       )
     `;
-    } else {
+    } else if (lightType === "line") {
       const percentage = Math.min(Math.max((top / height) * 100, 0), 100);
       lightRef.current.style.backgroundImage = `
         linear-gradient(50deg, #ffffff8e, #ffffff00, #00000040, #ffffff00 ${
           percentage - 15
         }%, #ffffff8e ${percentage}%, #ffffff00 ${
+        percentage + 15
+      }%, #00000040, #ffffff00, #ffffff8e)
+      `;
+    } else {
+      const percentage = Math.min(Math.max((top / height) * 100, 0), 100);
+      lightRef.current.style.backgroundImage = `
+        linear-gradient(50deg, rgba(111, 71, 133, 0.3), rgba(232, 129, 166, 0.3), rgba(237, 237, 183, 0.3), rgba(244, 166, 215, 0.3) ${
+          percentage - 15
+        }%, rgba(154, 219, 232, 0.3)${percentage}%, rgba(238, 226, 159, 0.3) ${
         percentage + 15
       }%, #00000040, #ffffff00, #ffffff8e)
       `;

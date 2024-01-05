@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import cardImg from "@src/assets/images/card_100025.png";
+
 const cardWidth = 300;
 
 export const InteractFrame = styled.div`
@@ -19,9 +21,12 @@ export const InteractCard = styled.div`
   height: 100%;
   background-color: rgb(96, 123, 192);
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-  transition-duration: 250ms;
   transition-property: transform, box-shadow;
+  transition-duration: 250ms, 50ms;
+
   transition-timing-function: ease-out;
+
+  background: url(${cardImg}) no-repeat center / 100%;
 `;
 
 export const InteractLight = styled.div`

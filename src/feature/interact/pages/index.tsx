@@ -6,6 +6,7 @@ const Interact = () => {
     <CardList>
       <Card lightType="circle" />
       <Card lightType="line" />
+      <Card lightType="glossy" />
     </CardList>
   );
 };
