@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import { CardList } from "../styles/interactStyles";
+import { CardList } from "../styles";
 
 const Interact = () => {
   return (

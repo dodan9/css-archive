@@ -1,4 +1,4 @@
-import { HorizonContainer, HorizonItem } from "../styles/horizonStyles";
+import { HorizonContainer, HorizonItem } from "../styles";
 
 const Horizon = () => {
   return (

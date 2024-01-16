@@ -1,9 +1,5 @@
 import { MouseEvent, useRef } from "react";
-import {
-  InteractCard,
-  InteractFrame,
-  InteractLight,
-} from "../styles/interactStyles";
+import { InteractCard, InteractFrame, InteractLight } from "../styles";
 
 const Card = ({ lightType }: { lightType: "circle" | "line" }) => {
   const frameRef = useRef<HTMLDivElement>(null);

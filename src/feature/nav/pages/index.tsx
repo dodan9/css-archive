@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavBar } from "../styled/navStyle";
+import { NavBar } from "../styles";
 
 const Nav = () => {
   return (
@@ -8,6 +8,7 @@ const Nav = () => {
       <Link to={"/horizon"}>horizon</Link>
       <Link to={"/interact"}>interact</Link>
       <Link to={"/scroll"}>scroll</Link>
+      <Link to={"/scroll-flip"}>scroll-flip</Link>
     </NavBar>
   );
 };

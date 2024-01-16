@@ -1,4 +1,4 @@
-import { ParallaxContainer, ParallaxItem } from "../styles/scrollStyles";
+import { ParallaxContainer, ParallaxItem } from "../styles";
 
 const Scroll = () => {
   return (
