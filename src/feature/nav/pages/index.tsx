@@ -9,6 +9,7 @@ const Nav = () => {
       <Link to={"/interact"}>interact</Link>
       <Link to={"/scroll"}>scroll</Link>
       <Link to={"/scroll-flip"}>scroll-flip</Link>
+      <Link to={"three"}>three</Link>
     </NavBar>
   );
 };

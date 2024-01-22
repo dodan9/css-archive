@@ -5,8 +5,8 @@ const ScrollFlipCard = ({
   index,
   start,
   end,
-  step,
-}: {
+}: //   step,
+{
   index: number;
   start: number;
   end: number;
