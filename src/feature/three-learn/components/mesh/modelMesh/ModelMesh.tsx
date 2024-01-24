@@ -22,7 +22,7 @@ const MemoizedFlatGroup = memo(({ parent }: { parent: Group }) => {
   return <>{flatGroup(parent)}</>;
 });
 
-export const ModelMesh = ({ path }: { path: string }) => {
+export const ModelMesh = memo(({ path }: { path: string }) => {
   const groupRef = useRef<Group>(null);
   const model = useLoader(GLTFLoader, path);
 
@@ -50,4 +50,4 @@ export const ModelMesh = ({ path }: { path: string }) => {
       })}
     </group>
   );
-};
+});

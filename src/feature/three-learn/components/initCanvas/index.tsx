@@ -1,21 +1,45 @@
 import { Canvas } from "@react-three/fiber";
 import { ModelMesh } from "../mesh/modelMesh/ModelMesh";
-import { Suspense } from "react";
+import { ChangeEvent, Suspense, useState } from "react";
 import { WorldBackground } from "../background/WorldBackground";
 import { WorldLight } from "../light/WorldLights";
 import { PresentationControls } from "@react-three/drei";
-
 import room from "@src/assets/model/room.glb";
 import { WorldCamera } from "../camera/WorldCamera";
+import { TexturePlane } from "../mesh/planeMesh/TexturePlane";
+import { Texture, TextureLoader } from "three";
+import { BoxMesh } from "../mesh/boxMesh/BoxMesh";
 
 const InitCanvas = () => {
-  return (
-    <Canvas shadows>
-      <WorldCamera />
-      <WorldBackground />
-      <WorldLight />
+  const [image, setImage] = useState<File | null>(null);
 
-      <Suspense fallback={null}>
+  const handleChangeImage = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files![0];
+
+    setImage(file);
+  };
+  const convertTexture = (image: File) => {
+    const loader = new TextureLoader();
+    const newTexture = loader.load(URL.createObjectURL(image));
+    return newTexture;
+  };
+
+  return (
+    <>
+      <input type="file" accept="image/*" onChange={handleChangeImage} />
+      <Canvas shadows>
+        <WorldCamera />
+        <WorldBackground />
+        <WorldLight />
+
+        {image && (
+          <>
+            <TexturePlane texture={convertTexture(image)} />
+          </>
+        )}
+
+        <BoxMesh />
+        {/* <Suspense fallback={null}>
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false
           global={false} // Spin globally or by dragging the model
@@ -30,8 +54,9 @@ const InitCanvas = () => {
         >
           <ModelMesh path={room} />
         </PresentationControls>
-      </Suspense>
-    </Canvas>
+      </Suspense> */}
+      </Canvas>
+    </>
   );
 };
 
