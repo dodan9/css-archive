@@ -12,15 +12,14 @@ export const SpringActionGroup = () => {
   useFrame((state, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y = -scroll.offset * (Math.PI * 2);
-      if (state.events.update) state.events.update();
 
+      if (state.events.update) state.events.update();
       easing.damp3(
         state.camera.position,
         [-state.pointer.x * 2, state.pointer.y + 1.5, 20],
         0.3,
         delta
       );
-
       state.camera.lookAt(0, 0, 0);
     }
   });
