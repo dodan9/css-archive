@@ -38,7 +38,7 @@ const InitCanvas = () => {
           </>
         )}
 
-        <BoxMesh />
+        {/* <BoxMesh /> */}
         {/* <Suspense fallback={null}>
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false
