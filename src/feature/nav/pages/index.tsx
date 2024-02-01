@@ -11,6 +11,7 @@ const Nav = () => {
       <Link to={"/scroll-flip"}>scroll-flip</Link>
       <Link to={"three"}>three</Link>
       <Link to={"three-scroll"}>three with scroll</Link>
+      <Link to={"three-animate"}>three with animate</Link>
     </NavBar>
   );
 };

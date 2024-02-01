@@ -40,6 +40,7 @@ const ScrollFlip = () => {
             return (
               <ScrollFlipCard
                 index={index + 1}
+                key={index}
                 start={start + step * index}
                 end={cardEnd}
                 step={step}

@@ -3,7 +3,7 @@ import { memo, useRef } from "react";
 import { Group, Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 
-const MemoizedFlatGroup = memo(({ parent }: { parent: Group }) => {
+export const MemoizedFlatGroup = memo(({ parent }: { parent: Group }) => {
   const flatGroup = (parent: Group): JSX.Element[] => {
     return parent.children.flatMap((child, index) => {
       if (child instanceof Mesh) {

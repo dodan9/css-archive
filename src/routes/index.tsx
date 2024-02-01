@@ -3,6 +3,7 @@ import Horizon from "@src/feature/horizon/pages";
 import Interact from "@src/feature/interact/pages";
 import ScrollFlip from "@src/feature/scroll-flip/pages";
 import Scroll from "@src/feature/scroll/pages";
+import ThreeAnimation from "@src/feature/three-animation/pages";
 import ThreeLearn from "@src/feature/three-learn/pages";
 import ThreeScroll from "@src/feature/three-scroll/pages";
 import { Route, Routes } from "react-router";
@@ -17,6 +18,7 @@ export const appRoute = () => {
       <Route path="/scroll-flip" element={<ScrollFlip />} />
       <Route path="/three" element={<ThreeLearn />} />
       <Route path="/three-scroll" element={<ThreeScroll />} />
+      <Route path="/three-animate" element={<ThreeAnimation />} />
     </Routes>
   );
 };
